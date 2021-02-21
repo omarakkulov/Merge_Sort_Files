@@ -1,3 +1,5 @@
+package ru.akkulov.strings;
+
 import java.io.*;
 
 public class ForStrings {
@@ -79,7 +81,7 @@ public class ForStrings {
 //
 //            }
 //
-//            List<Integer> res = MyMethods.merge_lists(list1, list2);
+//            List<Integer> res = ru.akkulov.general.MyMethods.merge_lists(list1, list2);
 //            for (Integer r : res) {
 //                writer.write(r + "\n");
 //            }

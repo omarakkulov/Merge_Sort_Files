@@ -1,3 +1,5 @@
+package ru.akkulov.general;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -50,7 +52,7 @@ public class MyMethods {
         int[] left = merge_sort(Arrays.copyOfRange(arr, 0, mid));
         // (right) - массив arr со значениями от mid, до конечного, то есть правая часть
         int[] right = merge_sort(Arrays.copyOfRange(arr, mid, arr.length));
-        
+
         return merge_arrays(left, right);
     }
 

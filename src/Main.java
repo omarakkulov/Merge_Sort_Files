@@ -1,3 +1,5 @@
+import ru.akkulov.integers.forIntegers;
+
 public class Main {
     public static void main(String[] args) {
 //        1. режим сортировки (-a или -d), необязательный, по умолчанию сортируем по возрастанию;
@@ -11,7 +13,7 @@ public class Main {
 
 
         long startTime = System.nanoTime();
-        ForNumbers numbers = new ForNumbers();
+        forIntegers numbers = new forIntegers();
 //        numbers.read1IntegerFile("in1.txt", "out.txt");
 //        numbers.read2IntegerFile("in2.txt", "in3.txt", "out.txt");
         numbers.read3IntegerFile("in1.txt", "in2.txt", "in3.txt", "out.txt");

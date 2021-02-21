@@ -1,12 +1,16 @@
+package ru.akkulov.integers;
+
+import ru.akkulov.general.MyMethods;
+
 import java.io.*;
 
-public class ForNumbers {
+public class forIntegers {
     public void read1IntegerFile(String inFile, String outFile) {
         try (FileInputStream in = new FileInputStream(inFile);
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
         ) {
             byte[] buffer = new byte[4096];
-            int count = 0;
+            int count;
             while (in.available() > 0) {
                 count = in.read(buffer);
                 int[] sortedArray = MyMethods.merge_sort(MyMethods.getArray(buffer, count));
