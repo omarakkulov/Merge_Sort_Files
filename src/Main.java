@@ -1,4 +1,4 @@
-import ru.akkulov.integers.forIntegers;
+import ru.akkulov.integers.ForIntegers;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Main {
 
 
         long startTime = System.nanoTime();
-        forIntegers numbers = new forIntegers();
+        ForIntegers numbers = new ForIntegers();
 //        numbers.read1IntegerFile("in1.txt", "out.txt");
 //        numbers.read2IntegerFile("in2.txt", "in3.txt", "out.txt");
         numbers.read3IntegerFile("in1.txt", "in2.txt", "in3.txt", "out.txt");

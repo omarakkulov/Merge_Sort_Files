@@ -4,7 +4,7 @@ import ru.akkulov.general.MyMethods;
 
 import java.io.*;
 
-public class forIntegers {
+public class ForIntegers {
     public void read1IntegerFile(String inFile, String outFile) {
         try (FileInputStream in = new FileInputStream(inFile);
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
