@@ -1,6 +1,6 @@
 package ru.akkulov.integers;
 
-import ru.akkulov.general.MyMethods;
+import ru.akkulov.general.MyIntMethods;
 
 import java.io.*;
 
@@ -13,13 +13,13 @@ public class ForIntegers {
             int count;
             while (in.available() > 0) {
                 count = in.read(buffer);
-                int[] sortedArray = MyMethods.merge_sort(MyMethods.getArray(buffer, count));
+                int[] sortedArray = MyIntMethods.merge_sort(MyIntMethods.getArray(buffer, count));
                 for (int i : sortedArray) {
                     out.write(i + "\n");
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден, укажите корректное имя файла");
+            System.out.println("Файл " + inFile + " не найден, укажите корректное имя файла");
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Ошибка записи");
@@ -41,16 +41,16 @@ public class ForIntegers {
             while (true) {
                 if (in1.available() > 0) {
                     count1 = in1.read(bufferIn1);
-                    sortArray1 = MyMethods.merge_sort(MyMethods.getArray(bufferIn1, count1));
+                    sortArray1 = MyIntMethods.merge_sort(MyIntMethods.getArray(bufferIn1, count1));
                 }
 
                 if (in2.available() > 0) {
                     count2 = in2.read(bufferIn2);
-                    sortArray2 = MyMethods.merge_sort(MyMethods.getArray(bufferIn2, count2));
+                    sortArray2 = MyIntMethods.merge_sort(MyIntMethods.getArray(bufferIn2, count2));
                 }
 
                 if (sortArray1 != null && sortArray2 != null) {
-                    resultArray = MyMethods.merge_arrays(sortArray1, sortArray2);
+                    resultArray = MyIntMethods.merge_arrays(sortArray1, sortArray2);
                 }
 
                 if (resultArray != null) {
@@ -92,22 +92,22 @@ public class ForIntegers {
             while (true) {
                 if (in1.available() > 0) {
                     count1 = in1.read(bufferIn1);
-                    sortArray1 = MyMethods.merge_sort(MyMethods.getArray(bufferIn1, count1));
+                    sortArray1 = MyIntMethods.merge_sort(MyIntMethods.getArray(bufferIn1, count1));
                 }
 
                 if (in2.available() > 0) {
                     count2 = in2.read(bufferIn2);
-                    sortArray2 = MyMethods.merge_sort(MyMethods.getArray(bufferIn2, count2));
+                    sortArray2 = MyIntMethods.merge_sort(MyIntMethods.getArray(bufferIn2, count2));
                 }
 
                 if (in3.available() > 0) {
                     count3 = in3.read(bufferIn3);
-                    sortArray3 = MyMethods.merge_sort(MyMethods.getArray(bufferIn3, count3));
+                    sortArray3 = MyIntMethods.merge_sort(MyIntMethods.getArray(bufferIn3, count3));
                 }
 
                 if (sortArray1 != null && sortArray2 != null && sortArray3 != null) {
-                    tmpArray = MyMethods.merge_arrays(sortArray1, sortArray2);
-                    resultArray = MyMethods.merge_arrays(tmpArray, sortArray3);
+                    tmpArray = MyIntMethods.merge_arrays(sortArray1, sortArray2);
+                    resultArray = MyIntMethods.merge_arrays(tmpArray, sortArray3);
                 }
 
                 if (resultArray != null) {

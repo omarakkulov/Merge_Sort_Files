@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MyMethods {
+public class MyIntMethods {
     public static int[] getArray(byte[] buffer, int count) {
         StringBuilder sb = new StringBuilder();
         int result;
