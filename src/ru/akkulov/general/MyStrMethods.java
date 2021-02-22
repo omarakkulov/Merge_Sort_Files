@@ -6,10 +6,12 @@ import java.util.List;
 
 public class MyStrMethods {
     public static String[] getArray(char[] buffer, int count) {
+        // Пробегаемся по буферу и собираем наши строка посимвольно, занося каждую отдельную строку в новый элемент массива
         StringBuilder sb = new StringBuilder();
         String result;
         List<String> tmpList = new ArrayList<>();
 
+        // Пробегаемся по тай части массива, в которой есть заполненные байты, соблюдая условия
         for (int i = 0; i < count; i++) {
             if (buffer[i] == 32) {
                 continue;

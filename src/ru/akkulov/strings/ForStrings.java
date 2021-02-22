@@ -9,10 +9,13 @@ public class ForStrings {
         try (InputStreamReader in = new InputStreamReader(new FileInputStream(inFile));
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
         ) {
+            // Создаем буфер с символами, в который будем записывать символы из файла
             char[] buffer = new char[4096];
             int count;
             while ((count = in.read(buffer)) >= 0) {
+                // Создается уже отсортированный массив строк из буфера
                 String[] sortedArray = MyStrMethods.merge_sort(MyStrMethods.getArray(buffer, count));
+                // Заносим каждый элемент этого массива в выходной поток
                 for (String i : sortedArray) {
                     out.write(i + "\n");
                 }
@@ -36,6 +39,8 @@ public class ForStrings {
             String[] sortArray1 = null;
             String[] sortArray2 = null;
             String[] resultArray = null;
+            // Создается два отсортированных массива из двух файлов, далее они сортируются между собой, в итоге
+            // создается новый отсортированый массив из двух прошлых массивов
             while (true) {
                 if ((count1 = in1.read(bufferIn1)) > 0) {
                     sortArray1 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn1, count1));
@@ -49,6 +54,7 @@ public class ForStrings {
                     resultArray = MyStrMethods.merge_arrays(sortArray1, sortArray2);
                 }
 
+                // Каждую строку заносим в поток выхода
                 if (resultArray != null) {
                     for (String i : resultArray) {
                         out.write(i + "\n");
@@ -72,6 +78,8 @@ public class ForStrings {
              InputStreamReader in3 = new InputStreamReader(new FileInputStream(inFile3));
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
         ) {
+            // Так же создается три буфера, далее три отсортированных массива, а в конце один большой отсортированный, строки
+            // которого заносим в выходной поток
             char[] bufferIn1 = new char[1024];
             char[] bufferIn2 = new char[1024];
             char[] bufferIn3 = new char[1024];

@@ -6,10 +6,12 @@ import java.util.List;
 
 public class MyIntMethods {
     public static int[] getArray(byte[] buffer, int count) {
+        // Пробегаемся по буферу и собираем наши числа посимвольно, занося каждое отдельное число в новый элемент массива
         StringBuilder sb = new StringBuilder();
         int result;
         List<Integer> tmpList = new ArrayList<>();
 
+        // Пробегаемся по тай части массива, в которой есть заполненные байты, соблюдая условия
         for (int i = 0; i < count; i++) {
             if (buffer[i] >= 'a' && buffer[i] <= 'z' || buffer[i] >= 'A' && buffer[i] <= 'Z') {
                 sb.setLength(0);

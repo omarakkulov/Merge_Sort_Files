@@ -9,11 +9,14 @@ public class ForIntegers {
         try (FileInputStream in = new FileInputStream(inFile);
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
         ) {
+            // Создаем буфер с байтами, в который будем записывать байты из файла
             byte[] buffer = new byte[4096];
             int count;
             while (in.available() > 0) {
                 count = in.read(buffer);
+                // Создается уже отсортированный массив чисел из буфера
                 int[] sortedArray = MyIntMethods.merge_sort(MyIntMethods.getArray(buffer, count));
+                // Заносим каждый элемент этого массива в выходной поток
                 for (int i : sortedArray) {
                     out.write(i + "\n");
                 }
@@ -38,6 +41,8 @@ public class ForIntegers {
             int[] sortArray1 = null;
             int[] sortArray2 = null;
             int[] resultArray = null;
+            // Создается два отсортированных массива из двух файлов, далее они сортируются между собой, в итоге
+            // создается новый отсортированый массив из двух прошлых массивов
             while (true) {
                 if (in1.available() > 0) {
                     count1 = in1.read(bufferIn1);
@@ -53,6 +58,7 @@ public class ForIntegers {
                     resultArray = MyIntMethods.merge_arrays(sortArray1, sortArray2);
                 }
 
+                // Каждое число заносим в поток выхода
                 if (resultArray != null) {
                     for (int i : resultArray) {
                         out.write(i + "\n");
@@ -78,6 +84,8 @@ public class ForIntegers {
              FileInputStream in3 = new FileInputStream(inFile3);
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
         ) {
+            // Так же создается три буфера, далее три отсортированных массива, а в конце один большой отсортированный, числа
+            // которого заносим в выходной поток
             byte[] bufferIn1 = new byte[2048];
             byte[] bufferIn2 = new byte[2048];
             byte[] bufferIn3 = new byte[2048];
