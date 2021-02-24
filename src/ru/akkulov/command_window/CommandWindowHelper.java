@@ -58,9 +58,14 @@ public class CommandWindowHelper {
         }
     }
 
+    // Метод для чтения файлов :)
     public static void readFiles() {
+        // Здесь проверяется, является ли файл числом
         if (CommandWindowHelper.isInteger) {
+            // Далее создается объект класса, который работает с числовыми выражениями
             ForIntegers integers = new ForIntegers();
+            // Жальше выполняются три условия. Исходя из длины файла, заносим во входные данные соответствующих методов
+            // нужные для нас элементы из коммандной строки
             if (CommandWindowHelper.inFilesCount == 1) {
                 integers.read1IntegerFile(CommandWindowHelper.inFiles.get(0),
                         CommandWindowHelper.outFile);
@@ -74,7 +79,7 @@ public class CommandWindowHelper {
                         CommandWindowHelper.inFiles.get(2),
                         CommandWindowHelper.outFile);
             }
-        } else {
+        } else { // Иначе если это строковый файл, выполняем подобные действия, как показано выше
             ForStrings strings = new ForStrings();
             if (CommandWindowHelper.inFilesCount == 1) {
                 strings.read1StringFile(CommandWindowHelper.inFiles.get(0),
