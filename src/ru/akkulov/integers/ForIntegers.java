@@ -5,16 +5,18 @@ import ru.akkulov.general.MyIntMethods;
 import java.io.*;
 
 public class ForIntegers {
+    // Для чтения одного числового файла
     public void read1IntegerFile(String inFile, String outFile) {
         try (FileInputStream in = new FileInputStream(inFile);
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
         ) {
             // Создаем буфер с байтами, в который будем записывать байты из файла
             byte[] buffer = new byte[4096];
+            // Количество байт, которое будет прочтено методом read из in
             int count;
             while (in.available() > 0) {
                 count = in.read(buffer);
-                // Создается уже отсортированный массив чисел из буфера
+                // Создается массив чисел из буфера, отсортированный методом слияния
                 int[] sortedArray = MyIntMethods.merge_sort(MyIntMethods.getArray(buffer, count));
                 // Заносим каждый элемент этого массива в выходной поток
                 for (int i : sortedArray) {
@@ -29,6 +31,7 @@ public class ForIntegers {
         }
     }
 
+    // Метод для чтения двух числовых файлов
     public void read2IntegerFile(String inFile1, String inFile2, String outFile) {
         try (FileInputStream in1 = new FileInputStream(inFile1);
              FileInputStream in2 = new FileInputStream(inFile2);
@@ -78,6 +81,7 @@ public class ForIntegers {
         }
     }
 
+    // Для чтения 3-х числовых файлов
     public void read3IntegerFile(String inFile1, String inFile2, String inFile3, String outFile) {
         try (FileInputStream in1 = new FileInputStream(inFile1);
              FileInputStream in2 = new FileInputStream(inFile2);

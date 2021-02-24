@@ -1,10 +1,12 @@
 package ru.akkulov.general;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class MyIntMethods {
+    // На выходе получается массив чисел из байтового массива буфера
     public static int[] getArray(byte[] buffer, int count) {
         // Пробегаемся по буферу и собираем наши числа посимвольно, занося каждое отдельное число в новый элемент массива
         StringBuilder sb = new StringBuilder();
@@ -12,10 +14,16 @@ public class MyIntMethods {
         List<Integer> tmpList = new ArrayList<>();
 
         // Пробегаемся по тай части массива, в которой есть заполненные байты, соблюдая условия
+        // Возврат коретки и переход на новую строку пропускаем
         for (int i = 0; i < count; i++) {
+            if (buffer[i] == 32 || buffer[i] == 13) {
+                continue;
+            }
             if (buffer[i] >= 'a' && buffer[i] <= 'z' || buffer[i] >= 'A' && buffer[i] <= 'Z') {
                 sb.setLength(0);
-                continue;
+                System.out.println("В файле обнаружено не числовое выражение. Остановка программы. Для строковых выражений используйте \"-s\" в аргументах командной строки!");
+                System.out.println("В файл для вывода отправлено значение 0, как некорректное");
+                return new int[]{0};
             }
             if (i == count - 1 && buffer[i] != 10) {
                 sb.append(Character.getNumericValue(buffer[i]));
@@ -23,7 +31,7 @@ public class MyIntMethods {
                 sb.setLength(0);
                 tmpList.add(result);
             }
-            if (buffer[i] != 10 && buffer[i] != 13) {
+            if (buffer[i] != 10) {
                 sb.append(Character.getNumericValue(buffer[i]));
             } else {
                 String tmp = sb.toString();
@@ -36,7 +44,7 @@ public class MyIntMethods {
                 }
             }
         }
-
+        // Создаем результирующий массив, который выводим в результат
         int[] resultArray = new int[tmpList.size()];
         for (int i = 0; i < resultArray.length; i++) {
             resultArray[i] = tmpList.get(i);
@@ -44,6 +52,7 @@ public class MyIntMethods {
         return resultArray;
     }
 
+    // Сортировка слиянием для числового массива
     public static int[] merge_sort(int[] arr) {
         if (arr.length == 1) {
             return arr;

@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MyStrMethods {
+    // На выходе получается массив строк из символьного массива буфера
     public static String[] getArray(char[] buffer, int count) {
         // Пробегаемся по буферу и собираем наши строка посимвольно, занося каждую отдельную строку в новый элемент массива
         StringBuilder sb = new StringBuilder();
@@ -12,8 +13,9 @@ public class MyStrMethods {
         List<String> tmpList = new ArrayList<>();
 
         // Пробегаемся по тай части массива, в которой есть заполненные байты, соблюдая условия
+        // Возврат коретки и переход на новую строку пропускаем
         for (int i = 0; i < count; i++) {
-            if (buffer[i] == 32) {
+            if (buffer[i] == 32 || buffer[i] == 13) {
                 continue;
             }
             if (i == count - 1 && buffer[i] != 10) {
@@ -24,14 +26,13 @@ public class MyStrMethods {
             }
             if (buffer[i] != 10 && buffer[i] != 13) {
                 sb.append(buffer[i]);
-            } else if (buffer[i] == 13) {
-                sb.append(0);
             } else {
                 result = sb.toString();
                 sb.setLength(0);
                 tmpList.add(result);
             }
         }
+        // Создаем результирующий массив, который выводим в результат
         String[] resultArray = new String[tmpList.size()];
         for (int i = 0; i < resultArray.length; i++) {
             resultArray[i] = tmpList.get(i);
@@ -39,21 +40,23 @@ public class MyStrMethods {
         return resultArray;
     }
 
-    public static String[] merge_sort(String[] arr) {
+    // Сортировка слиянием для строкового массива,
+    // здесь sortOrder - строка, с помощью которой программа понимает, как сортировать, по возрастанию или убыванию
+    public static String[] merge_sort(String[] arr, String sortOrder) {
         if (arr.length == 1) {
             return arr;
         }
         int mid = arr.length / 2;
         // (left) - массив arr со значениями от первого элемента, до середины (mid),
         // то есть левая часть основного массива
-        String[] left = merge_sort(Arrays.copyOfRange(arr, 0, mid));
+        String[] left = merge_sort(Arrays.copyOfRange(arr, 0, mid), sortOrder);
         // (right) - массив arr со значениями от mid, до конечного, то есть правая часть
-        String[] right = merge_sort(Arrays.copyOfRange(arr, mid, arr.length));
+        String[] right = merge_sort(Arrays.copyOfRange(arr, mid, arr.length), sortOrder);
 
-        return merge_arrays(left, right);
+        return merge_arrays(left, right, sortOrder);
     }
 
-    public static String[] merge_arrays(String[] a, String[] b) {
+    public static String[] merge_arrays(String[] a, String[] b, String sortOrder) {
         // Создадим результирующий массив, в который будем сливать два наших массива со входа
         String[] resultArray = new String[a.length + b.length];
 
@@ -74,11 +77,27 @@ public class MyStrMethods {
         // и в начало результирующего массива вставляется наименьший элемент из этих массивов
         while (i < a.length && j < b.length) {
             if (a[i].compareTo(b[j]) < 0) {
-                resultArray[tmp] = a[i];
-                i++;
+                if (sortOrder.equals("a")) {
+                    resultArray[tmp] = a[i];
+                    i++;
+                } else if (sortOrder.equals("d")) {
+                    resultArray[tmp] = b[j];
+                    j++;
+                } else {
+                    resultArray[tmp] = a[i];
+                    i++;
+                }
             } else {
-                resultArray[tmp] = b[j];
-                j++;
+                if (sortOrder.equals("a")) {
+                    resultArray[tmp] = b[j];
+                    j++;
+                } else if (sortOrder.equals("d")) {
+                    resultArray[tmp] = a[i];
+                    i++;
+                } else {
+                    resultArray[tmp] = b[j];
+                    j++;
+                }
             }
             tmp++;
         }

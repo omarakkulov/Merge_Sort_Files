@@ -5,16 +5,18 @@ import ru.akkulov.general.MyStrMethods;
 import java.io.*;
 
 public class ForStrings {
-    public void read1StringFile(String inFile, String outFile) {
+    // Для чтения одного строкового файла
+    public void read1StringFile(String inFile, String outFile, String sortOrder) {
         try (InputStreamReader in = new InputStreamReader(new FileInputStream(inFile));
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
         ) {
             // Создаем буфер с символами, в который будем записывать символы из файла
             char[] buffer = new char[4096];
+            // Количество байт, которое будет прочтено методом read из in
             int count;
             while ((count = in.read(buffer)) >= 0) {
-                // Создается уже отсортированный массив строк из буфера
-                String[] sortedArray = MyStrMethods.merge_sort(MyStrMethods.getArray(buffer, count));
+                // Создается массив строк из буфера, отсортированный методом слияния
+                String[] sortedArray = MyStrMethods.merge_sort(MyStrMethods.getArray(buffer, count), sortOrder);
                 // Заносим каждый элемент этого массива в выходной поток
                 for (String i : sortedArray) {
                     out.write(i + "\n");
@@ -27,7 +29,8 @@ public class ForStrings {
         }
     }
 
-    public void read2StringFile(String inFile1, String inFile2, String outFile) {
+    // Метод для чтения двух строковых файлов
+    public void read2StringFile(String inFile1, String inFile2, String outFile, String sortOrder) {
         try (InputStreamReader in1 = new InputStreamReader(new FileInputStream(inFile1));
              InputStreamReader in2 = new InputStreamReader(new FileInputStream(inFile2));
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
@@ -43,15 +46,15 @@ public class ForStrings {
             // создается новый отсортированый массив из двух прошлых массивов
             while (true) {
                 if ((count1 = in1.read(bufferIn1)) > 0) {
-                    sortArray1 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn1, count1));
+                    sortArray1 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn1, count1), sortOrder);
                 }
 
                 if ((count2 = in2.read(bufferIn2)) > 0) {
-                    sortArray2 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn2, count2));
+                    sortArray2 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn2, count2), sortOrder);
                 }
 
                 if (sortArray1 != null && sortArray2 != null) {
-                    resultArray = MyStrMethods.merge_arrays(sortArray1, sortArray2);
+                    resultArray = MyStrMethods.merge_arrays(sortArray1, sortArray2, sortOrder);
                 }
 
                 // Каждую строку заносим в поток выхода
@@ -72,7 +75,8 @@ public class ForStrings {
         }
     }
 
-    public void read3StringFile(String inFile1, String inFile2, String inFile3, String outFile) {
+    // Для чтения 3-х строковых файлов
+    public void read3StringFile(String inFile1, String inFile2, String inFile3, String outFile, String sortOrder) {
         try (InputStreamReader in1 = new InputStreamReader(new FileInputStream(inFile1));
              InputStreamReader in2 = new InputStreamReader(new FileInputStream(inFile2));
              InputStreamReader in3 = new InputStreamReader(new FileInputStream(inFile3));
@@ -93,20 +97,20 @@ public class ForStrings {
             String[] resultArray = null;
             while (true) {
                 if ((count1 = in1.read(bufferIn1)) > 0) {
-                    sortArray1 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn1, count1));
+                    sortArray1 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn1, count1), sortOrder);
                 }
 
                 if ((count2 = in2.read(bufferIn2)) > 0) {
-                    sortArray2 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn2, count2));
+                    sortArray2 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn2, count2), sortOrder);
                 }
 
                 if ((count3 = in3.read(bufferIn3)) > 0) {
-                    sortArray3 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn3, count3));
+                    sortArray3 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn3, count3), sortOrder);
                 }
 
                 if (sortArray1 != null && sortArray2 != null && sortArray3 != null) {
-                    tmpArray = MyStrMethods.merge_arrays(sortArray1, sortArray2);
-                    resultArray = MyStrMethods.merge_arrays(tmpArray, sortArray3);
+                    tmpArray = MyStrMethods.merge_arrays(sortArray1, sortArray2, sortOrder);
+                    resultArray = MyStrMethods.merge_arrays(tmpArray, sortArray3, sortOrder);
                 }
 
                 if (resultArray != null) {
