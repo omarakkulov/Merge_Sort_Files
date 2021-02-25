@@ -23,7 +23,7 @@ public class ForStrings {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Папка не найдена, введите корректное название!");
+            System.out.println("Folder not found, enter correct name!");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -69,7 +69,7 @@ public class ForStrings {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Папка не найдена, введите корректное название!");
+            System.out.println("Folder not found, enter correct name!");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -124,7 +124,7 @@ public class ForStrings {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Папка не найдена, введите корректное название!");
+            System.out.println("Folder not found, enter correct name!");
         } catch (IOException e) {
             e.printStackTrace();
         }

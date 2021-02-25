@@ -24,10 +24,10 @@ public class ForIntegers {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Файл " + inFile + " не найден, укажите корректное имя файла");
+            System.out.println("File " + inFile + " not found, enter a valid file name");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Ошибка записи");
+            System.out.println("Write error!");
         }
     }
 
@@ -74,10 +74,10 @@ public class ForIntegers {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println("Папка не найдена");
+            System.out.println("Folder not found");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Ошибка чтения файла");
+            System.out.println("File read error");
         }
     }
 
@@ -134,10 +134,10 @@ public class ForIntegers {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println("Папка не найдена");
+            System.out.println("Folder not found");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Ошибка чтения файла");
+            System.out.println("File read error");
         }
     }
 }

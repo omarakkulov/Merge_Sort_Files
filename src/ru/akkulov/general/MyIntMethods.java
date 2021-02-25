@@ -21,8 +21,8 @@ public class MyIntMethods {
             }
             if (buffer[i] >= 'a' && buffer[i] <= 'z' || buffer[i] >= 'A' && buffer[i] <= 'Z') {
                 sb.setLength(0);
-                System.out.println("В файле обнаружено не числовое выражение. Остановка программы. Для строковых выражений используйте \"-s\" в аргументах командной строки!");
-                System.out.println("В файл для вывода отправлено значение 0, как некорректное");
+                System.out.println("A non-numeric expression was found in the file. Stopping the program. For string expressions, use \"-s\" in command line arguments!");
+                System.out.println("The value 0 was sent to the file for output as invalid");
                 return new int[]{0};
             }
             if (i == count - 1 && buffer[i] != 10) {

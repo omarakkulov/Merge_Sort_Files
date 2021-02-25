@@ -8,9 +8,13 @@ import java.util.List;
 
 public class CommandWindowHelper {
     public static boolean isInteger;
+    // Выходной файл
     public static String outFile;
+    // Входные файлы
     public static List<String> inFiles;
+    // Количество входных файлов
     public static int inFilesCount;
+    // Стандартное значение для сортировки - по возрастсанию
     public static String sortOrder = "-a";
 
     public static void init(String[] args) {
@@ -64,8 +68,7 @@ public class CommandWindowHelper {
         if (CommandWindowHelper.isInteger) {
             // Далее создается объект класса, который работает с числовыми выражениями
             ForIntegers integers = new ForIntegers();
-            // Жальше выполняются три условия. Исходя из длины файла, заносим во входные данные соответствующих методов
-            // нужные для нас элементы из коммандной строки
+            // Дальше выполняются три условия. Исходя из длины файла, заносим во входные данные соответствующих методов нужные для нас элементы из коммандной строки
             if (CommandWindowHelper.inFilesCount == 1) {
                 integers.read1IntegerFile(CommandWindowHelper.inFiles.get(0),
                         CommandWindowHelper.outFile);
@@ -79,7 +82,8 @@ public class CommandWindowHelper {
                         CommandWindowHelper.inFiles.get(2),
                         CommandWindowHelper.outFile);
             }
-        } else { // Иначе если это строковый файл, выполняем подобные действия, как показано выше
+        } else {
+            // Otherwise, if it is a string file, perform similar actions as shown above
             ForStrings strings = new ForStrings();
             if (CommandWindowHelper.inFilesCount == 1) {
                 strings.read1StringFile(CommandWindowHelper.inFiles.get(0),
