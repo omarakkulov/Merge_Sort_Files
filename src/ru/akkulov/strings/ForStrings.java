@@ -5,35 +5,36 @@ import ru.akkulov.general.MyStrMethods;
 import java.io.*;
 
 public class ForStrings {
-    // Для чтения одного строкового файла
+    // To read one line file
     public void read1StringFile(String inFile, String outFile, String sortOrder) {
-        try (InputStreamReader in = new InputStreamReader(new FileInputStream(inFile));
-             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
+        try (InputStreamReader in = new InputStreamReader(new FileInputStream("..\\files\\" + inFile));
+             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("..\\files\\" + outFile)), 4096);
         ) {
-            // Создаем буфер с символами, в который будем записывать символы из файла
+            // Create a buffer with characters, into which we will write characters from the file
             char[] buffer = new char[4096];
-            // Количество байт, которое будет прочтено методом read из in
+            // The number of bytes that will be read by the read method from in
             int count;
             while ((count = in.read(buffer)) >= 0) {
-                // Создается массив строк из буфера, отсортированный методом слияния
+                // Creates an array of strings from the buffer, sorted by the merge method
                 String[] sortedArray = MyStrMethods.merge_sort(MyStrMethods.getArray(buffer, count), sortOrder);
-                // Заносим каждый элемент этого массива в выходной поток
+                // Write each element of this array to the output stream
                 for (String i : sortedArray) {
                     out.write(i + "\n");
                 }
             }
+            System.out.println("Successfully!");
         } catch (FileNotFoundException e) {
-            System.out.println("Folder not found, enter correct name!");
+            System.out.println("File " + inFile + " not found, enter a valid file name");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    // Метод для чтения двух строковых файлов
+    // Method for reading two string files
     public void read2StringFile(String inFile1, String inFile2, String outFile, String sortOrder) {
-        try (InputStreamReader in1 = new InputStreamReader(new FileInputStream(inFile1));
-             InputStreamReader in2 = new InputStreamReader(new FileInputStream(inFile2));
-             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
+        try (InputStreamReader in1 = new InputStreamReader(new FileInputStream("..\\files\\" + inFile1));
+             InputStreamReader in2 = new InputStreamReader(new FileInputStream("..\\files\\" + inFile2));
+             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("..\\files\\" + outFile)), 4096);
         ) {
             char[] bufferIn1 = new char[1024];
             char[] bufferIn2 = new char[1024];
@@ -42,8 +43,8 @@ public class ForStrings {
             String[] sortArray1 = null;
             String[] sortArray2 = null;
             String[] resultArray = null;
-            // Создается два отсортированных массива из двух файлов, далее они сортируются между собой, в итоге
-            // создается новый отсортированый массив из двух прошлых массивов
+            // Creates two sorted arrays from two files, then they are sorted among themselves, as a result
+            // create a new sorted array from the two previous arrays
             while (true) {
                 if ((count1 = in1.read(bufferIn1)) > 0) {
                     sortArray1 = MyStrMethods.merge_sort(MyStrMethods.getArray(bufferIn1, count1), sortOrder);
@@ -57,7 +58,7 @@ public class ForStrings {
                     resultArray = MyStrMethods.merge_arrays(sortArray1, sortArray2, sortOrder);
                 }
 
-                // Каждую строку заносим в поток выхода
+                // Write each line to the exit stream
                 if (resultArray != null) {
                     for (String i : resultArray) {
                         out.write(i + "\n");
@@ -68,6 +69,7 @@ public class ForStrings {
                     break;
                 }
             }
+            System.out.println("Successfully!");
         } catch (FileNotFoundException e) {
             System.out.println("Folder not found, enter correct name!");
         } catch (IOException e) {
@@ -75,15 +77,15 @@ public class ForStrings {
         }
     }
 
-    // Для чтения 3-х строковых файлов
+    // To read 3 line files
     public void read3StringFile(String inFile1, String inFile2, String inFile3, String outFile, String sortOrder) {
-        try (InputStreamReader in1 = new InputStreamReader(new FileInputStream(inFile1));
-             InputStreamReader in2 = new InputStreamReader(new FileInputStream(inFile2));
-             InputStreamReader in3 = new InputStreamReader(new FileInputStream(inFile3));
-             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
+        try (InputStreamReader in1 = new InputStreamReader(new FileInputStream("..\\files\\" + inFile1));
+             InputStreamReader in2 = new InputStreamReader(new FileInputStream("..\\files\\" + inFile2));
+             InputStreamReader in3 = new InputStreamReader(new FileInputStream("..\\files\\" + inFile3));
+             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("..\\files\\" + outFile)), 4096);
         ) {
-            // Так же создается три буфера, далее три отсортированных массива, а в конце один большой отсортированный, строки
-            // которого заносим в выходной поток
+            // Three buffers are also created, then three sorted arrays, and at the end one large sorted, strings
+            // which we put into the output stream
             char[] bufferIn1 = new char[1024];
             char[] bufferIn2 = new char[1024];
             char[] bufferIn3 = new char[1024];
@@ -123,6 +125,7 @@ public class ForStrings {
                     break;
                 }
             }
+            System.out.println("Successfully!");
         } catch (FileNotFoundException e) {
             System.out.println("Folder not found, enter correct name!");
         } catch (IOException e) {

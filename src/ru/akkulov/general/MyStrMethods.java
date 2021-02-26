@@ -5,15 +5,15 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MyStrMethods {
-    // На выходе получается массив строк из символьного массива буфера
+    // The output is an array of strings from the buffer character array
     public static String[] getArray(char[] buffer, int count) {
-        // Пробегаемся по буферу и собираем наши строка посимвольно, занося каждую отдельную строку в новый элемент массива
+        // Loop through the buffer and collect our string character by character, putting each individual string into a new array element
         StringBuilder sb = new StringBuilder();
         String result;
         List<String> tmpList = new ArrayList<>();
 
-        // Пробегаемся по тай части массива, в которой есть заполненные байты, соблюдая условия
-        // Возврат коретки и переход на новую строку пропускаем
+        // We go through the secret part of the array, which has filled bytes, observing the conditions
+        // Return the root and skip to a new line
         for (int i = 0; i < count; i++) {
             if (buffer[i] == 32 || buffer[i] == 13) {
                 continue;
@@ -32,7 +32,7 @@ public class MyStrMethods {
                 tmpList.add(result);
             }
         }
-        // Создаем результирующий массив, который выводим в результат
+        // Create the resulting array, which we output to the result
         String[] resultArray = new String[tmpList.size()];
         for (int i = 0; i < resultArray.length; i++) {
             resultArray[i] = tmpList.get(i);
@@ -40,29 +40,29 @@ public class MyStrMethods {
         return resultArray;
     }
 
-    // Сортировка слиянием для строкового массива,
-    // здесь sortOrder - строка, с помощью которой программа понимает, как сортировать, по возрастанию или убыванию
+    // Merge sort for string array,
+    // here sortOrder is a string by which the program understands how to sort, ascending or descending
     public static String[] merge_sort(String[] arr, String sortOrder) {
         if (arr.length == 1) {
             return arr;
         }
         int mid = arr.length / 2;
-        // (left) - массив arr со значениями от первого элемента, до середины (mid),
-        // то есть левая часть основного массива
+        // (left) - array arr with values from the first element to the middle (mid),
+        // that is, the left side of the main array
         String[] left = merge_sort(Arrays.copyOfRange(arr, 0, mid), sortOrder);
-        // (right) - массив arr со значениями от mid, до конечного, то есть правая часть
+        // (right) - array arr with values from mid to final, that is, the right side
         String[] right = merge_sort(Arrays.copyOfRange(arr, mid, arr.length), sortOrder);
 
         return merge_arrays(left, right, sortOrder);
     }
 
     public static String[] merge_arrays(String[] a, String[] b, String sortOrder) {
-        // Создадим результирующий массив, в который будем сливать два наших массива со входа
+        // Create a resulting array into which we will merge our two arrays from the input
         String[] resultArray = new String[a.length + b.length];
 
-        // i, j  - индексы для перебора массивов a и b
+        // i, j - indices for iterating over arrays a and b
         int i = 0, j = 0;
-        // tmp - индекс для перебора результирующего массива (resultArray)
+        // tmp - index for iterating over the resulting array (resultArray)
         int tmp = 0;
 
         // Реализация слияния представляет собой цикл, в котором resultArray[tmp] присваивается либо a[i] , либо b[j]
@@ -101,22 +101,22 @@ public class MyStrMethods {
             }
             tmp++;
         }
-        // Случай, когда индекс i не дошел до конца списка a, поэтому в конец результирующего массива resultArray
-        // (то есть начиная с индекса tmp) вставляются элементы массива a, начиная с индекса i
+        // The case when the index i has not reached the end of the list a, therefore to the end of the resulting array resultArray
+        // (that is, starting at index tmp) elements of array a are inserted starting at index i
         if (i < a.length) {
             for (; i < a.length; i++) {
                 resultArray[tmp] = a[i];
                 tmp++;
             }
         }
-        // Такой же обратный случай, как выше, только с индексом j и массивом b
+        // Same reverse case as above, only with index j and array b
         if (j < b.length) {
             for (; j < b.length; j++) {
                 resultArray[tmp] = b[j];
                 tmp++;
             }
         }
-        // Возвращаем отсортированный массив
+        // Return the sorted array
         return resultArray;
     }
 }

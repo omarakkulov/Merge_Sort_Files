@@ -5,37 +5,37 @@ import ru.akkulov.general.MyIntMethods;
 import java.io.*;
 
 public class ForIntegers {
-    // Для чтения одного числового файла
+    // To read one numeric file
     public void read1IntegerFile(String inFile, String outFile) {
-        try (FileInputStream in = new FileInputStream(inFile);
-             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
+        try (FileInputStream in = new FileInputStream("..\\files\\" + inFile);
+             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("..\\files\\" + outFile)), 4096);
         ) {
-            // Создаем буфер с байтами, в который будем записывать байты из файла
+            // Create a buffer with bytes, into which we will write bytes from the file
             byte[] buffer = new byte[4096];
-            // Количество байт, которое будет прочтено методом read из in
+            // The number of bytes that will be read by the read method from in
             int count;
             while (in.available() > 0) {
                 count = in.read(buffer);
-                // Создается массив чисел из буфера, отсортированный методом слияния
+                // Creates an array of numbers from the buffer, sorted by the merge method
                 int[] sortedArray = MyIntMethods.merge_sort(MyIntMethods.getArray(buffer, count));
-                // Заносим каждый элемент этого массива в выходной поток
+                // Write each element of this array to the output stream
                 for (int i : sortedArray) {
                     out.write(i + "\n");
                 }
             }
+            System.out.println("Successfully!");
         } catch (FileNotFoundException e) {
-            System.out.println("File " + inFile + " not found, enter a valid file name");
+            System.out.println("File \"" + inFile + "\" not found, enter a valid file name");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Write error!");
         }
     }
 
-    // Метод для чтения двух числовых файлов
+    // Method for reading two numeric files
     public void read2IntegerFile(String inFile1, String inFile2, String outFile) {
-        try (FileInputStream in1 = new FileInputStream(inFile1);
-             FileInputStream in2 = new FileInputStream(inFile2);
-             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
+        try (FileInputStream in1 = new FileInputStream("..\\files\\" + inFile1);
+             FileInputStream in2 = new FileInputStream("..\\files\\" + inFile2);
+             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("..\\files\\" + outFile)), 4096);
         ) {
             byte[] bufferIn1 = new byte[1024];
             byte[] bufferIn2 = new byte[1024];
@@ -44,8 +44,8 @@ public class ForIntegers {
             int[] sortArray1 = null;
             int[] sortArray2 = null;
             int[] resultArray = null;
-            // Создается два отсортированных массива из двух файлов, далее они сортируются между собой, в итоге
-            // создается новый отсортированый массив из двух прошлых массивов
+            // Creates two sorted arrays from two files, then they are sorted among themselves, as a result
+            // create a new sorted array from the two previous arrays
             while (true) {
                 if (in1.available() > 0) {
                     count1 = in1.read(bufferIn1);
@@ -61,7 +61,7 @@ public class ForIntegers {
                     resultArray = MyIntMethods.merge_arrays(sortArray1, sortArray2);
                 }
 
-                // Каждое число заносим в поток выхода
+                // We put each number into the exit stream
                 if (resultArray != null) {
                     for (int i : resultArray) {
                         out.write(i + "\n");
@@ -72,24 +72,23 @@ public class ForIntegers {
                     break;
                 }
             }
+            System.out.println("Successfully!");
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.out.println("Folder not found");
+            System.out.println("One of the files was not found, please enter a valid filename");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("File read error");
         }
     }
 
-    // Для чтения 3-х числовых файлов
+    // To read 3 numeric files
     public void read3IntegerFile(String inFile1, String inFile2, String inFile3, String outFile) {
-        try (FileInputStream in1 = new FileInputStream(inFile1);
-             FileInputStream in2 = new FileInputStream(inFile2);
-             FileInputStream in3 = new FileInputStream(inFile3);
-             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile)), 4096);
+        try (FileInputStream in1 = new FileInputStream("..\\files\\" + inFile1);
+             FileInputStream in2 = new FileInputStream("..\\files\\" + inFile2);
+             FileInputStream in3 = new FileInputStream("..\\files\\" + inFile3);
+             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("..\\files\\" + outFile)), 4096);
         ) {
-            // Так же создается три буфера, далее три отсортированных массива, а в конце один большой отсортированный, числа
-            // которого заносим в выходной поток
+            // Three buffers are also created, then three sorted arrays, and at the end one large sorted, numbers
+            // which we put into the output stream
             byte[] bufferIn1 = new byte[2048];
             byte[] bufferIn2 = new byte[2048];
             byte[] bufferIn3 = new byte[2048];
@@ -129,12 +128,13 @@ public class ForIntegers {
                 }
 
                 if (in1.read() == -1 && in2.read() == -1 && in3.read() == -1) {
+                    System.out.println("Successfully!");
                     break;
                 }
             }
+            System.out.println("Successfully!");
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.out.println("Folder not found");
+            System.out.println("One of the files was not found, please enter a valid filename");
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("File read error");

@@ -8,27 +8,27 @@ import java.util.List;
 
 public class CommandWindowHelper {
     public static boolean isInteger;
-    // Выходной файл
     public static String outFile;
-    // Входные файлы
     public static List<String> inFiles;
-    // Количество входных файлов
     public static int inFilesCount;
-    // Стандартное значение для сортировки - по возрастсанию
+    // Default value for sorting is ascending
     public static String sortOrder = "-a";
 
     public static void init(String[] args) {
         inFiles = new ArrayList<>();
         int tmp = 0;
-        // Прогоняемся в цикле по массиву, дойдя до выходного файла, будет останавливать цикл, зная с какого элемента
-        // начинаются входные файлы с помощью переменной tmp
+        // We loop through the array, reaching the output file, it will stop the loop, knowing from which element
+        // start input files with tmp variable
+        if (args.length == 0 || args.length == 1 || args.length == 2) {
+            System.out.println("Invalid input data");
+        }
         for (String arg : args) {
             if (arg.contains(".txt")) {
                 outFile = arg;
                 tmp++;
                 break;
             }
-            // Сравниваем поданные строки с нужными для нас, далее увеличиваем tmp++
+            // Compare the given lines with the ones we need, then increase tmp++
             switch (arg) {
                 case "-a":
                     sortOrder = "-a";
@@ -48,27 +48,33 @@ public class CommandWindowHelper {
                     break;
             }
         }
-        // Случай, когда по массиву пробежались, но не нашли там выходной файл
+        // The case when we ran through the array, but did not find the output file there
         if (tmp == args.length) {
-            System.out.println("Нет входных файлов, добавьте!");
+            System.out.println("No input files, please add!");
             return;
         }
-        // Пробегаемся по входным файлам и добавляем их в лист для последующего добавления их в методы нужных классов
+        if (!args[tmp - 1].contains(".txt")) {
+            System.out.println("File \"" + args[tmp - 1] + "\" is not exist");
+            return;
+        }
+        // We go through the input files and add them to the sheet for later adding them to the methods of the required classes
         for (int i = tmp; i < args.length; i++) {
             if (args[i].contains(".txt")) {
                 inFiles.add(args[i]);
                 inFilesCount++;
+            } else {
+                System.out.println("File \"" + args[i] + "\" is not exist");
             }
         }
     }
 
-    // Метод для чтения файлов :)
+    // Method for reading files :)
     public static void readFiles() {
-        // Здесь проверяется, является ли файл числом
+        // This checks if the file is a number
         if (CommandWindowHelper.isInteger) {
-            // Далее создается объект класса, который работает с числовыми выражениями
+            // Next, a class object is created that works with numeric expressions
             ForIntegers integers = new ForIntegers();
-            // Дальше выполняются три условия. Исходя из длины файла, заносим во входные данные соответствующих методов нужные для нас элементы из коммандной строки
+            // Then three conditions are met. Based on the length of the file, we enter the elements we need from the command line into the input data of the corresponding methods
             if (CommandWindowHelper.inFilesCount == 1) {
                 integers.read1IntegerFile(CommandWindowHelper.inFiles.get(0),
                         CommandWindowHelper.outFile);

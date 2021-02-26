@@ -1,27 +1,26 @@
 package ru.akkulov.general;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class MyIntMethods {
-    // На выходе получается массив чисел из байтового массива буфера
+    // The output is an array of numbers from the byte array of the buffer
     public static int[] getArray(byte[] buffer, int count) {
-        // Пробегаемся по буферу и собираем наши числа посимвольно, занося каждое отдельное число в новый элемент массива
+        // Go through the buffer and collect our numbers character by character, putting each individual number into a new array element
         StringBuilder sb = new StringBuilder();
         int result;
         List<Integer> tmpList = new ArrayList<>();
 
-        // Пробегаемся по тай части массива, в которой есть заполненные байты, соблюдая условия
-        // Возврат коретки и переход на новую строку пропускаем
+        // We go through the secret part of the array, which has filled bytes, observing the conditions
+        // Return the root and skip to a new line
         for (int i = 0; i < count; i++) {
             if (buffer[i] == 32 || buffer[i] == 13) {
                 continue;
             }
             if (buffer[i] >= 'a' && buffer[i] <= 'z' || buffer[i] >= 'A' && buffer[i] <= 'Z') {
                 sb.setLength(0);
-                System.out.println("A non-numeric expression was found in the file. Stopping the program. For string expressions, use \"-s\" in command line arguments!");
+                System.out.println("A non-numeric expression was found at the beginning of the file. Stopping the program. For string expressions, use \"-s\" in command line arguments!");
                 System.out.println("The value 0 was sent to the file for output as invalid");
                 return new int[]{0};
             }
@@ -44,7 +43,7 @@ public class MyIntMethods {
                 }
             }
         }
-        // Создаем результирующий массив, который выводим в результат
+        // Create the resulting array, which we output to the result
         int[] resultArray = new int[tmpList.size()];
         for (int i = 0; i < resultArray.length; i++) {
             resultArray[i] = tmpList.get(i);
@@ -52,28 +51,28 @@ public class MyIntMethods {
         return resultArray;
     }
 
-    // Сортировка слиянием для числового массива
+    // Merge sort for numeric array
     public static int[] merge_sort(int[] arr) {
         if (arr.length == 1) {
             return arr;
         }
         int mid = arr.length / 2;
-        // (left) - массив arr со значениями от первого элемента, до середины (mid),
-        // то есть левая часть основного массива
+        // (left) - array arr with values from the first element to the middle (mid),
+        // that is, the left side of the main array
         int[] left = merge_sort(Arrays.copyOfRange(arr, 0, mid));
-        // (right) - массив arr со значениями от mid, до конечного, то есть правая часть
+        // (right) - array arr with values from mid to final, that is, the right side
         int[] right = merge_sort(Arrays.copyOfRange(arr, mid, arr.length));
 
         return merge_arrays(left, right);
     }
 
     public static int[] merge_arrays(int[] a, int[] b) {
-        // Создадим результирующий массив, в который будем сливать два наших массива со входа
+        // Create a resulting array into which we will merge our two arrays from the input
         int[] resultArray = new int[a.length + b.length];
 
-        // i, j  - индексы для перебора массивов a и b
+        // i, j - indices for iterating over arrays a and b
         int i = 0, j = 0;
-        // tmp - индекс для перебора результирующего массива (resultArray)
+        // tmp - index for iterating over the resulting array (resultArray)
         int tmp = 0;
 
         // Реализация слияния представляет собой цикл, в котором resultArray[tmp] присваивается либо a[i] , либо b[j]
@@ -96,22 +95,22 @@ public class MyIntMethods {
             }
             tmp++;
         }
-        // Случай, когда индекс i не дошел до конца списка a, поэтому в конец результирующего массива resultArray
-        // (то есть начиная с индекса tmp) вставляются элементы массива a, начиная с индекса i
+        // The case when the index i has not reached the end of the list a, therefore to the end of the resulting array resultArray
+        // (that is, starting at index tmp) elements of array a are inserted starting at index i
         if (i < a.length) {
             for (; i < a.length; i++) {
                 resultArray[tmp] = a[i];
                 tmp++;
             }
         }
-        // Такой же обратный случай, как выше, только с индексом j и массивом b
+        // Same reverse case as above, only with index j and array b
         if (j < b.length) {
             for (; j < b.length; j++) {
                 resultArray[tmp] = b[j];
                 tmp++;
             }
         }
-        // Возвращаем отсортированный массив
+        // Return the sorted array
         return resultArray;
     }
 }

@@ -1,3 +1,5 @@
+package ru.akkulov;
+
 import ru.akkulov.command_window.CommandWindowHelper;
 
 public class Main {
@@ -10,7 +12,6 @@ public class Main {
 //        sort-it.exe -i -a out.txt in.txt (для целых чисел по возрастанию)
 //        sort-it.exe -s out.txt in1.txt in2.txt in3.txt (для строк по возрастанию)
 //        sort-it.exe -d -s out.txt in1.txt in2.txt (для строк по убыванию)
-
         CommandWindowHelper.init(args);
         CommandWindowHelper.readFiles();
     }
