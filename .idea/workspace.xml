@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d1a805c-c479-4483-b73a-62fde3321541" name="Default Changelist" comment="The End.">
+    <list default="true" id="4d1a805c-c479-4483-b73a-62fde3321541" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/in1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/in1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/in2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/in2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/in3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/in3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/command_window/CommandWindowHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/command_window/CommandWindowHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/general/MyIntMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/general/MyIntMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/general/MyStrMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/general/MyStrMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/integers/ForIntegers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/integers/ForIntegers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/strings/ForStrings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/strings/ForStrings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/command_window/CommandWindowHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/command_window/CommandWindowHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/akkulov/command_window/CommandWindowHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/command_window/CommandWindowHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/general/MyIntMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/general/MyIntMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/akkulov/general/MyIntMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/general/MyIntMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/general/MyStrMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/general/MyStrMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/integers/ForIntegers.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/integers/ForIntegers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/akkulov/integers/ForIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/integers/ForIntegers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/strings/ForStrings.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/strings/ForStrings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/akkulov/strings/ForStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/strings/ForStrings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,21 +51,26 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TelegramBot" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Main" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Knowledge\IntelliJ_IDEA_Projects\Merge_Sort\resources" />
+      <recent name="D:\Knowledge\IntelliJ_IDEA_Projects\Merge_Sort\src\ru\akkulov\general" />
+      <recent name="D:\Knowledge\IntelliJ_IDEA_Projects\Merge_Sort\src\ru\akkulov\command_window" />
+      <recent name="D:\Knowledge\IntelliJ_IDEA_Projects\Merge_Sort\src\ru\akkulov\strings" />
+      <recent name="D:\Knowledge\IntelliJ_IDEA_Projects\Merge_Sort\src\ru\akkulov\integers" />
+      <recent name="D:\Knowledge\IntelliJ_IDEA_Projects\Merge_Sort\src\ru\akkulov" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="ru.akkulov.Main" />
       <module name="Merge_Sort" />
+      <option name="PROGRAM_PARAMETERS" value="-s -a out.txt in1.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614136695906</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="cmd">
+      <created>1614255487793</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1614255487793</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,17 +199,30 @@
     <MESSAGE value="For ints and strings" />
     <MESSAGE value="comments" />
     <MESSAGE value="The End." />
-    <option name="LAST_COMMIT_MESSAGE" value="The End." />
+    <MESSAGE value="cmd" />
+    <option name="LAST_COMMIT_MESSAGE" value="cmd" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614255155220">
+    <state x="361" y="72" key="#Notifications" timestamp="1614285837873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1614255155220" />
+    <state x="361" y="72" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1614285837873" />
+    <state x="168" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614380409965">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="168" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1614380409965" />
+    <state x="541" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614285661783">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="541" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1614285661783" />
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1613753246488">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613753246488" />
+    <state x="558" y="197" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1614279430146">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="558" y="197" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1614279430146" />
     <state x="485" y="132" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1613840275572">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -200,34 +235,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613753204788" />
-    <state x="297" y="8" key="CommitChangelistDialog2" timestamp="1614136702134">
+    <state x="297" y="8" key="CommitChangelistDialog2" timestamp="1614255485159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="297" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614136702134" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1614133858361">
+    <state x="297" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614255485159" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1614380755290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1614133858361" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1614247296800">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1614380755290" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1614380490714">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614247296800" />
-    <state width="1493" height="176" key="GridCell.Tab.0.bottom" timestamp="1614255445980">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614380490714" />
+    <state width="1493" height="176" key="GridCell.Tab.0.bottom" timestamp="1614380903604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614255445980" />
-    <state width="1493" height="176" key="GridCell.Tab.0.center" timestamp="1614255445980">
+    <state width="1493" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614380903604" />
+    <state width="1493" height="176" key="GridCell.Tab.0.center" timestamp="1614380903604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614255445980" />
-    <state width="1493" height="176" key="GridCell.Tab.0.left" timestamp="1614255445980">
+    <state width="1493" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614380903604" />
+    <state width="1493" height="176" key="GridCell.Tab.0.left" timestamp="1614380903604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614255445980" />
-    <state width="1493" height="176" key="GridCell.Tab.0.right" timestamp="1614255445980">
+    <state width="1493" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614380903604" />
+    <state width="1493" height="176" key="GridCell.Tab.0.right" timestamp="1614380903604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614255445980" />
+    <state width="1493" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614380903604" />
     <state width="1493" height="286" key="GridCell.Tab.1.bottom" timestamp="1614199195726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -244,25 +279,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="286" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1614199195726" />
-    <state x="307" y="0" key="SettingsEditor" timestamp="1614254371454">
+    <state x="307" y="0" key="SettingsEditor" timestamp="1614279433511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="307" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614254371454" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1614136708735">
+    <state x="307" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614279433511" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1614255497088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614136708735" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614255497088" />
     <state x="209" y="40" key="new project wizard" timestamp="1613496557065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="40" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1613496557065" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1614133567023">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1614374931553">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1614133567023" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1613854110184">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1614374931553" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1614285204472">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1613854110184" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614285204472" />
   </component>
 </project>
