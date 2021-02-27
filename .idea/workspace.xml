@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d1a805c-c479-4483-b73a-62fde3321541" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files/in1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/in3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/out.txt" afterDir="false" />
+    <list default="true" id="4d1a805c-c479-4483-b73a-62fde3321541" name="Default Changelist" comment="something :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/in2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/in2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/command_window/CommandWindowHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/command_window/CommandWindowHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/general/MyIntMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/general/MyIntMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/general/MyStrMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/general/MyStrMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/integers/ForIntegers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/integers/ForIntegers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/strings/ForStrings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Merge_Sort/ru/akkulov/strings/ForStrings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/command_window/CommandWindowHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/command_window/CommandWindowHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/command_window/CommandWindowHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/command_window/CommandWindowHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/in1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/in1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/out.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/akkulov/general/MyIntMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/general/MyIntMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/general/MyIntMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/general/MyIntMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/general/MyStrMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/general/MyStrMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/integers/ForIntegers.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/integers/ForIntegers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/integers/ForIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/integers/ForIntegers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/strings/ForStrings.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/strings/ForStrings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/akkulov/strings/ForStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/akkulov/strings/ForStrings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1oU9ulsaJGcyRdUq39QDsa4hAwx" />
   <component name="ProjectViewState">
@@ -186,7 +166,28 @@
       <option name="project" value="LOCAL" />
       <updated>1614382904133</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="files">
+      <created>1614382987072</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1614382987072</updated>
+    </task>
+    <task id="LOCAL-00014" summary="classes">
+      <created>1614383064621</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614383064621</updated>
+    </task>
+    <task id="LOCAL-00015" summary="something :)">
+      <created>1614383166999</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1614383166999</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,7 +212,10 @@
     <MESSAGE value="The End." />
     <MESSAGE value="cmd" />
     <MESSAGE value=".idea" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea" />
+    <MESSAGE value="files" />
+    <MESSAGE value="classes" />
+    <MESSAGE value="something :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="something :)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#Notifications" timestamp="1614285837873">
@@ -246,10 +250,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613753204788" />
-    <state x="297" y="8" key="CommitChangelistDialog2" timestamp="1614383062642">
+    <state x="297" y="8" key="CommitChangelistDialog2" timestamp="1614385226203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="297" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614383062642" />
+    <state x="297" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614385226203" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1614380755290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -258,22 +262,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614380490714" />
-    <state width="1493" height="176" key="GridCell.Tab.0.bottom" timestamp="1614380903604">
+    <state width="1493" height="176" key="GridCell.Tab.0.bottom" timestamp="1614383206271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614380903604" />
-    <state width="1493" height="176" key="GridCell.Tab.0.center" timestamp="1614380903604">
+    <state width="1493" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614383206271" />
+    <state width="1493" height="176" key="GridCell.Tab.0.center" timestamp="1614383206271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614380903604" />
-    <state width="1493" height="176" key="GridCell.Tab.0.left" timestamp="1614380903604">
+    <state width="1493" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614383206271" />
+    <state width="1493" height="176" key="GridCell.Tab.0.left" timestamp="1614383206271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614380903604" />
-    <state width="1493" height="176" key="GridCell.Tab.0.right" timestamp="1614380903604">
+    <state width="1493" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614383206271" />
+    <state width="1493" height="176" key="GridCell.Tab.0.right" timestamp="1614383206271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614380903604" />
+    <state width="1493" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614383206271" />
     <state width="1493" height="286" key="GridCell.Tab.1.bottom" timestamp="1614199195726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -294,10 +298,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="307" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614279433511" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1614383067861">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1614385230682">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614383067861" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614385230682" />
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614384218332">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1614384218332" />
     <state x="209" y="40" key="new project wizard" timestamp="1613496557065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
